@@ -31,10 +31,10 @@ export const verifyPasswordMessage = (message) => {
     verifyErrorMessage(loginPage.errorMessage, message, 1)    
 }
 
-export const verifyPasswordFieldColor = () => {
-    verifyColor(password, 'red')
+export const verifyPasswordFieldColor = (color) => {
+    verifyColor(password, color)
 }
 
-export const verifyQAPortalLoginColor = () => {
-    verifyColor(QAPortalLogin, 'green')
+export const verifyQAPortalLoginColor = (color) => {
+    verifyColor(QAPortalLogin, color)
 }

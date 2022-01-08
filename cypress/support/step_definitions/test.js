@@ -18,7 +18,7 @@ Given('user on login page', () => {
 Then('all element on page are visible', () => {
     verifyElementVisibility(image)    
     verifyElementVisibility(QAPortalLogin)
-    verifyQAPortalLoginColor()
+    verifyQAPortalLoginColor('green')
     verifyElementVisibility(username)
     verifyElementVisibility(password)
     verifyElementVisibility(loginButton)
@@ -35,9 +35,9 @@ And('click button login', () => {
 
 Then('system should give error message without username and password', () => {
     verifyUsernameMessage('Please enter username.');
-    verifyUsernameFieldColor()
+    verifyUsernameFieldColor('red')
     verifyPasswordMessage('Please enter your password.')
-    verifyPasswordFieldColor()
+    verifyPasswordFieldColor('red')
 })
 // -----------------------------------------------------------------------------------------------------------//
 When('user typed invalid password and login', () => {
@@ -64,6 +64,7 @@ And('click button login', () => {
 
 Then('system should give error message not filled field username', () => {
     verifyUsernameMessage('Please enter username.')
+    verifyUsernameFieldColor('red')
     cy.screenshot()
 });
 
@@ -76,5 +77,6 @@ And('click button login', () => {
 
 Then('system should give error message not filled field password', () => {
     verifyPasswordMessage('Please enter your password.');
+    verifyPasswordFieldColor('red')
     cy.screenshot();
 });

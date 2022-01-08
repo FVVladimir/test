@@ -1,0 +1,6 @@
+{
+    "integrationFolder":"cypress/features",
+    "supportFile":"cypress/support/index.js",
+    "testFiles":"**/*.feature",
+    "baseUrl":"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php"
+}

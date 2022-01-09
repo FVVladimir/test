@@ -52,7 +52,7 @@ And('click button login', () => {
     pressLoginButton()
 });
 
-Then('system should give error message with invalid data', () => {
+Then('system should give error message about invalid data', () => {
     verifyUsernameMessage('No account found with that username.')
     cy.screenshot()
 });

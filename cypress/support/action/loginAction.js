@@ -38,3 +38,8 @@ export const verifyPasswordFieldColor = (color) => {
 export const verifyQAPortalLoginColor = (color) => {
     verifyColor(QAPortalLogin, color)
 }
+export const verifyPecodeImage = () => {
+    cy.get(loginPage.image)
+        .should('be.visible')
+        .should('have.attr', 'src', Cypress.env("pecodeImage"));
+}

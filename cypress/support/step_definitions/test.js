@@ -6,23 +6,26 @@ import {
     verifyUsernameMessage,
     verifyQAPortalLoginColor,
     verifyUsernameFieldColor,
-    verifyPasswordFieldColor
+    verifyPasswordFieldColor,
+    verifyPecodeImage
 } from '../action/loginAction.js';
-import { verifyElementVisibility} from '../action/globalAction.js';
+import { verifyElementVisibility, verifyUrl} from '../action/globalAction.js';
 import  {image, QAPortalLogin, username,password,loginButton} from '../pageObject/loginPage'
 
 Given('user on login page', () => {
-    cy.visit('/') 
+    cy.visit('/')
+    verifyUrl('https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php')
 });
 // -----------------------------------------------------------------------------------------------------------//
 Then('all element on page are visible', () => {
-    verifyElementVisibility(image)    
+    verifyElementVisibility(image)
+    verifyPecodeImage()   
     verifyElementVisibility(QAPortalLogin)
     verifyQAPortalLoginColor('green')
     verifyElementVisibility(username)
     verifyElementVisibility(password)
     verifyElementVisibility(loginButton)
-    
+    cy.screenshot()
 });
 // -----------------------------------------------------------------------------------------------------------//
 When('user not typed username and password', () => {

@@ -23,3 +23,7 @@ export const clearField = (elem) => {
 export const verifyColor = (elem,color) => {
     cy.get(elem).should('have.css', 'border-color', Cypress.env(color));
 }
+
+export const verifyUrl = url => {
+    cy.url().should('include', url);
+}

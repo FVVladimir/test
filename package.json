@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^9.2.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "cypress-cucumber-prepocessor":{
-    "nonGlobalStepDefinitions":false
+  "cypress-cucumber-prepocessor": {
+    "nonGlobalStepDefinitions": false
   }
 }
